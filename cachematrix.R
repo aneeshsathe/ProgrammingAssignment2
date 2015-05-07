@@ -1,7 +1,10 @@
-## Put comments here that give an overall description of what your
-## functions do
+## cacheSolve() calculates the inverse of the input matrix. If the inverse already exists
+## then it is retrieved from the cached. matrix.
+##makeCacheMatrix creates a vector of functions for an input matrix which
+## cacheSolve() uses to retrieve an already calculated inverse
 
-## Write a short comment describing this function
+
+## Creates vector to store retrieve and get input matrices and their inverses
 
 makeCacheMatrix <- function(x = matrix(, ncol = 2, nrow = 2)) {
         m <- NULL
@@ -20,7 +23,8 @@ makeCacheMatrix <- function(x = matrix(, ncol = 2, nrow = 2)) {
 }
 
 
-## Write a short comment describing this function
+## Returns the inverse of input matrix. If the inverse already exists in cache then 
+## that value is returned.
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
